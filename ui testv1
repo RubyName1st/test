@@ -55,11 +55,11 @@ function option:Button(name)
     local Button = Instance.new("TextButton")
 local ButtonCornor = Instance.new("UICorner")
 
-Button.Name = "Button"
+Button.Name = name
 Button.Parent = Container
 Button.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
 Button.Size = UDim2.new(0, 421, 0, 50)
-Button.AutoButtonColor = false
+Button.AutoButtonColor = true
 Button.Font = Enum.Font.Gotham
 Button.TextColor3 = Color3.fromRGB(0, 0, 0)
 Button.TextSize = 30.000
