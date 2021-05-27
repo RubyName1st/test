@@ -1,0 +1,76 @@
+local library = {}
+
+function library:Main()
+
+local Library = Instance.new("ScreenGui")
+local Main = Instance.new("Frame")
+local MainCornor = Instance.new("UICorner")
+local Header = Instance.new("TextLabel")
+local Container = Instance.new("ScrollingFrame")
+local Layout = Instance.new("UIListLayout")
+
+Library.Name = "Library"
+Library.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Library.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Main.Name = "Main"
+Main.Parent = Library
+Main.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Main.Position = UDim2.new(0.274432391, 0, 0.314426631, 0)
+Main.Size = UDim2.new(0, 456, 0, 301)
+
+MainCornor.Name = "MainCornor"
+MainCornor.Parent = Main
+
+Header.Name = "Header"
+Header.Parent = Main
+Header.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Header.BackgroundTransparency = 1.000
+Header.Position = UDim2.new(0.0285087712, 0, 0, 0)
+Header.Size = UDim2.new(0, 431, 0, 49)
+Header.Font = Enum.Font.FredokaOne
+Header.Text = "Hee lib"
+Header.TextColor3 = Color3.fromRGB(0, 0, 0)
+Header.TextSize = 40.000
+Header.TextXAlignment = Enum.TextXAlignment.Left
+
+Container.Name = "Container"
+Container.Parent = Main
+Container.Active = true
+Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Container.BackgroundTransparency = 1.000
+Container.BorderColor3 = Color3.fromRGB(255, 255, 255)
+Container.Position = UDim2.new(0.0285087712, 0, 0.162790701, 0)
+Container.Size = UDim2.new(0, 431, 0, 239)
+Container.ScrollBarThickness = 6
+
+Layout.Name = "Layout"
+Layout.Parent = Container
+Layout.SortOrder = Enum.SortOrder.LayoutOrder
+
+
+local option = {}
+
+function option:Button(name)
+    local Button = Instance.new("TextButton")
+local ButtonCornor = Instance.new("UICorner")
+
+Button.Name = name
+Button.Parent = Container
+Button.BackgroundColor3 = Color3.fromRGB(203, 203, 203)
+Button.Size = UDim2.new(0, 421, 0, 50)
+Button.AutoButtonColor = true
+Button.Font = Enum.Font.Gotham
+Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Button.TextSize = 30.000
+
+ButtonCornor.Name = "ButtonCornor"
+ButtonCornor.Parent = Button
+
+end
+
+return option;
+
+end
+
+return library;
